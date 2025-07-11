@@ -1,18 +1,14 @@
 #include "sound_data.h"
-#include "pc/rom_assets.h"
-
-#define SAMPLES_SIZE 0x5b8200
-#define SEQUENCES_SIZE 0x1ca00
 
 unsigned char gSoundDataADSR[] = {
 #include "sound/sound_data.ctl.inc.c"
 };
 
-unsigned char gSoundDataRaw[SAMPLES_SIZE] = {
+unsigned char gSoundDataRaw[] = {
 #include "sound/sound_data.tbl.inc.c"
 };
 
-unsigned char gMusicData[SEQUENCES_SIZE] = {
+unsigned char gMusicData[] = {
 #include "sound/sequences.bin.inc.c"
 };
 
@@ -20,4 +16,8 @@ unsigned char gMusicData[SEQUENCES_SIZE] = {
 unsigned char gBankSetsData[] = {
 #include "sound/bank_sets.inc.c"
 };
+<<<<<<< HEAD
 #endif
+=======
+#endif
+>>>>>>> parent of 0810f0139 (no longer need a rom to compile the game)

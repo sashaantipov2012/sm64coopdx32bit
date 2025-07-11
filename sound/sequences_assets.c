@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 #include "pc/rom_assets.h"
 #include "sound_data.h"
 #include "sound/sequences_offsets.h"
+=======
+
+#include "pc/rom_assets.h"
+#include "sound_data.h"
+#include "sound/sequences_offsets.inc.c"
+>>>>>>> parent of 0810f0139 (no longer need a rom to compile the game)
 
 ROM_ASSET_LOAD_SEQUENCE(SEQUENCE_us_01_cutscene_collect_star_m64, &gMusicData[SEQUENCE_us_01_cutscene_collect_star_m64], 0x007b3e10, 619, 0x00000000, 619);
 ROM_ASSET_LOAD_SEQUENCE(SEQUENCE_us_02_menu_title_screen_m64, &gMusicData[SEQUENCE_us_02_menu_title_screen_m64], 0x007b4080, 8254, 0x00000000, 8254);
