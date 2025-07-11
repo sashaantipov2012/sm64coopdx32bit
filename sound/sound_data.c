@@ -16,8 +16,4 @@ unsigned char gMusicData[] = {
 unsigned char gBankSetsData[] = {
 #include "sound/bank_sets.inc.c"
 };
-<<<<<<< HEAD
 #endif
-=======
-#endif
->>>>>>> parent of 0810f0139 (no longer need a rom to compile the game)

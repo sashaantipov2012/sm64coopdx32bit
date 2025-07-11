@@ -751,36 +751,23 @@ def serialize_seqfile(
             f.write(ser.finish())
 
         if out_filename.endswith('sound_data.tbl'):
-<<<<<<< HEAD
             out_offsets_filename = 'sound/samples_offsets.h'
-=======
-            out_offsets_filename = out_filename.replace('sound_data.tbl', 'samples_offsets.inc.c')
->>>>>>> parent of 0810f0139 (no longer need a rom to compile the game)
             with open(out_offsets_filename, "w") as f:
                 for fname in asset_offsets:
                     macro_name = 'SAMPLE_' + fname.split('/samples/')[-1].replace('/', '_').replace('.', '_').replace('-', '_')
                     f.write(f'#define {macro_name} {hex(asset_offsets[fname] + data_start)} // {fname}\n')
-<<<<<<< HEAD
             out_filename = 'sound/sound_data_compressed.tbl'
             compress = True
 
         if out_filename.endswith('sequences.bin'):
             out_offsets_filename = 'sound/sequences_offsets.h'
-=======
-
-        if out_filename.endswith('sequences.bin'):
-            out_offsets_filename = out_filename.replace('sequences.bin', 'sequences_offsets.inc.c')
->>>>>>> parent of 0810f0139 (no longer need a rom to compile the game)
             with open(out_offsets_filename, "w") as f:
                 for fname in asset_offsets:
                     macro_name = 'SEQUENCE_' + fname.split('/sequences/')[-1].replace('/', '_').replace('.', '_').replace('-', '_')
                     f.write(f'#define {macro_name} {hex(asset_offsets[fname] + data_start)} // {fname}\n')
-<<<<<<< HEAD
             data = data[:entry_offsets[1] + data_start] # remove the fake data
             out_filename = 'sound/sequences_compressed.bin'
             compress = True
-=======
->>>>>>> parent of 0810f0139 (no longer need a rom to compile the game)
 
 
 def validate_and_normalize_sequence_json(json, bank_names, defines):
